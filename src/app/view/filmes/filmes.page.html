@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Buscar filmes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [ngModel]="searchTerms" (ionChange)="search()"></ion-searchbar>
+
+  <ion-item>
+    <ion-label>Seleciona o Tipo</ion-label>
+    <ion-select [ngModel]="type" (ionChange)="search()">Tudo</ion-select>
+    <ion-select-option value="">Tudo</ion-select-option>
+    <ion-select-option value="movie">Filmes</ion-select-option>
+    <ion-select-option value="series">Séries</ion-select-option>
+    <ion-select-option value="episode">Episodios</ion-select-option>
+    <ion-select-option value="game">Jogos</ion-select-option>
+  </ion-item>
+
+</ion-content>
